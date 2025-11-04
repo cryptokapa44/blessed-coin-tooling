@@ -1,6 +1,6 @@
 // site.js – Blessed Coin live stats script
-const MORALIS_API_KEY = "YOUR_API_KEY_HERE";      // ← Replace with your actual key
-const TOKEN_ADDRESS   = "YOUR_TOKEN_ADDRESS_HERE"; // ← Replace with the actual SPL token address on Solana
+const MORALIS_API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub25jZSI6ImUxN2JjZmIzLTRjMjctNDUxMy04YTY4LTg1NDMwNjRjNWIyZSIsIm9yZ0lkIjoiNDc5NTUxIiwidXNlcklkIjoiNDkzMzU5IiwidHlwZUlkIjoiOTc4OGI4MTAtMmU0YS00MmU3LWI2OTAtNjNkZTE0M2QzODNkIiwidHlwZSI6IlBST0pFQ1QiLCJpYXQiOjE3NjIyOTEwNDMsImV4cCI6NDkxODA1MTA0M30.cDiBBTnUu5zqJHtvVMZKQjqEbr86mbjIJmdc-gEQlI4";      // ← Replace with your actual key
+const TOKEN_ADDRESS   = "93Abgo489Qyit2L4RV4cZ3z6gbvr45xscF34SikPpump"; // ← Replace with the actual SPL token address on Solana
 const NETWORK         = "mainnet";                // Use "mainnet" for Solana production
 
 document.addEventListener("DOMContentLoaded", () => {
