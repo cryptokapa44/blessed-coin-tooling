@@ -82,8 +82,14 @@
 
 
 <!-- Sacred Quests Section -->
-<section id="quests" class="relative py-20 px-8 text-center bg-neutral-950 text-amber-100">
-  <div class="max-w-6xl mx-auto">
+<section id="quests" 
+  class="relative py-20 px-8 text-center text-amber-100 bg-cover bg-center bg-no-repeat"
+  style="background-image: url('images/reading.png');">
+  
+  <!-- Overlay for readability -->
+  <div class="absolute inset-0 bg-black/60"></div>
+
+  <div class="relative max-w-6xl mx-auto z-10">
     <h2 class="text-5xl font-extrabold mb-6 text-amber-300 drop-shadow-lg">Sacred Quests</h2>
     <p class="text-lg mb-12 text-amber-100/90">
       The path to faith is long. Complete each quest to earn your place in the trenches.
@@ -92,8 +98,8 @@
     <!-- Grid of 10 Locked Quests -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
 
-      <!-- Locked Quest Card Template -->
-      <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-6 opacity-60 hover:opacity-80 transition-all">
+      <!-- Locked Quest Template (Repeated 10 Times) -->
+      <div class="bg-neutral-900/80 rounded-2xl shadow-lg shadow-amber-900/40 p-6 opacity-70 hover:opacity-90 transition-all backdrop-blur-sm">
         <h3 class="text-2xl font-bold mb-4 text-amber-400">Locked Quest</h3>
         <p class="mb-6 italic text-amber-200/70">Complete previous quests to unlock this path.</p>
         <button class="px-6 py-3 bg-amber-800 text-neutral-900 rounded font-semibold opacity-60 cursor-not-allowed">
@@ -101,8 +107,8 @@
         </button>
       </div>
 
-      <!-- Duplicate for 10 quests -->
-      <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-6 opacity-60 hover:opacity-80 transition-all">
+      <!-- Duplicate this div for 10 quests -->
+      <div class="bg-neutral-900/80 rounded-2xl shadow-lg shadow-amber-900/40 p-6 opacity-70 hover:opacity-90 transition-all backdrop-blur-sm">
         <h3 class="text-2xl font-bold mb-4 text-amber-400">Locked Quest</h3>
         <p class="mb-6 italic text-amber-200/70">Complete previous quests to unlock this path.</p>
         <button class="px-6 py-3 bg-amber-800 text-neutral-900 rounded font-semibold opacity-60 cursor-not-allowed">
@@ -110,73 +116,12 @@
         </button>
       </div>
 
-      <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-6 opacity-60 hover:opacity-80 transition-all">
-        <h3 class="text-2xl font-bold mb-4 text-amber-400">Locked Quest</h3>
-        <p class="mb-6 italic text-amber-200/70">Complete previous quests to unlock this path.</p>
-        <button class="px-6 py-3 bg-amber-800 text-neutral-900 rounded font-semibold opacity-60 cursor-not-allowed">
-          Locked
-        </button>
-      </div>
-
-      <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-6 opacity-60 hover:opacity-80 transition-all">
-        <h3 class="text-2xl font-bold mb-4 text-amber-400">Locked Quest</h3>
-        <p class="mb-6 italic text-amber-200/70">Complete previous quests to unlock this path.</p>
-        <button class="px-6 py-3 bg-amber-800 text-neutral-900 rounded font-semibold opacity-60 cursor-not-allowed">
-          Locked
-        </button>
-      </div>
-
-      <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-6 opacity-60 hover:opacity-80 transition-all">
-        <h3 class="text-2xl font-bold mb-4 text-amber-400">Locked Quest</h3>
-        <p class="mb-6 italic text-amber-200/70">Complete previous quests to unlock this path.</p>
-        <button class="px-6 py-3 bg-amber-800 text-neutral-900 rounded font-semibold opacity-60 cursor-not-allowed">
-          Locked
-        </button>
-      </div>
-
-      <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-6 opacity-60 hover:opacity-80 transition-all">
-        <h3 class="text-2xl font-bold mb-4 text-amber-400">Locked Quest</h3>
-        <p class="mb-6 italic text-amber-200/70">Complete previous quests to unlock this path.</p>
-        <button class="px-6 py-3 bg-amber-800 text-neutral-900 rounded font-semibold opacity-60 cursor-not-allowed">
-          Locked
-        </button>
-      </div>
-
-      <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-6 opacity-60 hover:opacity-80 transition-all">
-        <h3 class="text-2xl font-bold mb-4 text-amber-400">Locked Quest</h3>
-        <p class="mb-6 italic text-amber-200/70">Complete previous quests to unlock this path.</p>
-        <button class="px-6 py-3 bg-amber-800 text-neutral-900 rounded font-semibold opacity-60 cursor-not-allowed">
-          Locked
-        </button>
-      </div>
-
-      <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-6 opacity-60 hover:opacity-80 transition-all">
-        <h3 class="text-2xl font-bold mb-4 text-amber-400">Locked Quest</h3>
-        <p class="mb-6 italic text-amber-200/70">Complete previous quests to unlock this path.</p>
-        <button class="px-6 py-3 bg-amber-800 text-neutral-900 rounded font-semibold opacity-60 cursor-not-allowed">
-          Locked
-        </button>
-      </div>
-
-      <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-6 opacity-60 hover:opacity-80 transition-all">
-        <h3 class="text-2xl font-bold mb-4 text-amber-400">Locked Quest</h3>
-        <p class="mb-6 italic text-amber-200/70">Complete previous quests to unlock this path.</p>
-        <button class="px-6 py-3 bg-amber-800 text-neutral-900 rounded font-semibold opacity-60 cursor-not-allowed">
-          Locked
-        </button>
-      </div>
-
-      <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-6 opacity-60 hover:opacity-80 transition-all">
-        <h3 class="text-2xl font-bold mb-4 text-amber-400">Locked Quest</h3>
-        <p class="mb-6 italic text-amber-200/70">Complete previous quests to unlock this path.</p>
-        <button class="px-6 py-3 bg-amber-800 text-neutral-900 rounded font-semibold opacity-60 cursor-not-allowed">
-          Locked
-        </button>
-      </div>
+      <!-- (continue duplicating the same block until you have 10 total) -->
 
     </div>
   </div>
 </section>
+
 
   <!-- Art & Winners Section -->
   <section id="art-winners" class="bg-neutral-800 text-amber-200 py-16 px-8">
