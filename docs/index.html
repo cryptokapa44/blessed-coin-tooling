@@ -90,13 +90,17 @@
 </section>
 
 <!-- Sacred Quests Section -->
-<section id="quests" 
-  class="relative py-20 px-8 text-center text-amber-100 bg-cover bg-center bg-no-repeat"
-  style="background-image: url('images/reading.png');">
-  
-<!-- Sacred Quests Section -->
-<section id="quests" class="relative py-20 px-8 text-center bg-neutral-950 text-amber-100">
-  <div class="max-w-6xl mx-auto">
+<section id="quests" class="relative text-amber-100 overflow-hidden bg-neutral-950">
+  <!-- Background image -->
+  <div class="absolute inset-0 bg-cover bg-center opacity-90"
+       style="background-image: url('images/reading.png');"></div>
+
+  <!-- Strong fades for blending -->
+  <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/90 to-transparent pointer-events-none"></div>
+  <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/90 to-transparent pointer-events-none"></div>
+
+  <!-- Content -->
+  <div class="relative max-w-6xl mx-auto py-20 px-8 text-center">
     <h2 class="text-5xl font-extrabold mb-6 text-amber-300 drop-shadow-lg">Sacred Quests</h2>
     <p class="text-lg mb-12 text-amber-100/90">
       The path to faith is long. Complete each quest to earn your place in the trenches.
@@ -190,8 +194,6 @@
     </div>
   </div>
 </section>
-
-
 
   <!-- Art & Winners Section -->
   <section id="art-winners" class="bg-neutral-800 text-amber-200 py-16 px-8">
