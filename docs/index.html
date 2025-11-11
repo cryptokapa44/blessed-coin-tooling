@@ -37,14 +37,18 @@
 <section id="community-cta"
          class="relative overflow-hidden min-h-screen flex items-center px-6 sm:px-8 text-amber-100 bg-neutral-950"
          style="background-image: url('images/supper.png'); background-size: cover; background-position: center;">
-  <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/85 via-neutral-900/50 to-neutral-950/25"></div>
+  <!-- Top fade overlay -->
+  <div class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black/70 to-transparent pointer-events-none"></div>
+  <!-- Bottom fade overlay -->
+  <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
+
   <div class="relative z-10 max-w-4xl mx-auto text-center py-32 sm:py-40">
     <p class="uppercase tracking-[0.25em] text-amber-300/80 text-xs sm:text-sm mb-4">Healer of the Trenches</p>
     <h1 class="text-5xl sm:text-6xl font-extrabold leading-tight text-amber-200 drop-shadow mb-6">
       Join the Blessed Community
     </h1>
     <p class="mt-4 text-xl sm:text-2xl text-amber-100/90 mb-10">
-      Stand with the faithful. At the table of the trenches, we rise together—healed, renewed, and equipped for the next wave.
+      Stand with the faithful. In the trenches we rise together—healed, renewed, and equipped for the next wave.
     </p>
     <a href="https://x.com/your-handle" target="_blank" rel="noopener"
        class="inline-flex items-center justify-center rounded-2xl px-8 py-5 font-semibold
@@ -53,6 +57,7 @@
     </a>
   </div>
 </section>
+
 
 <!-- About Section -->
 <section id="about" class="relative text-amber-100 py-32 px-6 sm:px-8 overflow-hidden min-h-screen">
