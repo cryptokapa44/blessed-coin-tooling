@@ -200,8 +200,15 @@
   <!-- Background image -->
   <div class="absolute inset-0 bg-cover bg-center"
        style="background-image: url('images/win.png');"></div>
-  <!-- Dark fade overlay -->
+  
+  <!-- Top dark fade overlay -->
+  <div class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-neutral-900/90 to-transparent"></div>
+
+  <!-- Main fade overlay -->
   <div class="absolute inset-0 bg-gradient-to-b from-transparent to-neutral-900/90"></div>
+
+  <!-- Bottom dark fade overlay -->
+  <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-neutral-900/90 to-transparent"></div>
 
   <div class="relative max-w-6xl mx-auto">
     <h2 class="text-4xl md:text-5xl font-bold mb-8 text-amber-300 drop-shadow-lg text-center">
@@ -210,6 +217,9 @@
     <p class="mb-12 text-lg text-amber-100/80 leading-relaxed text-center">
       Recognising the champions from each challenge — the ones who held the flame.
     </p>
+
+    <!-- winners grid etc etc -->
+
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
       <!-- Box 1 -->
