@@ -197,8 +197,11 @@
 
 <!-- Winners Section -->
 <section id="winners" class="relative text-amber-100 py-32 px-6 sm:px-8 overflow-hidden min-h-screen bg-neutral-900">
-  <div class="absolute inset-0 bg-cover bg-center opacity-15"
+  <!-- Background + fade overlay -->
+  <div class="absolute inset-0 bg-cover bg-center"
        style="background-image: url('images/win.png');"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent to-neutral-900/90"></div>
+
   <div class="relative max-w-5xl mx-auto">
     <h2 class="text-4xl md:text-5xl font-bold mb-8 text-amber-300 drop-shadow-lg text-center">
       Hall of Blessed Winners
@@ -208,102 +211,110 @@
     </p>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-      <!-- Slot 1 (vertical 10 dots + placeholder) -->
-      <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-5 h-56 opacity-70 hover:opacity-90 transition-all transform duration-300 hover:scale-105 overflow-hidden flex flex-col justify-start items-center">
+      <!-- Box 1 -->
+      <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-5 h-56 opacity-70 hover:opacity-90 transition-all transform duration-300 hover:scale-105 flex flex-col justify-start items-center">
         <div class="flex flex-col justify-center items-center space-y-1 text-amber-200 text-3xl font-semibold mt-2">
           <div>•</div><div>•</div><div>•</div><div>•</div>
           <div>•</div><div>•</div><div>•</div><div>•</div>
           <div>•</div><div>•</div>
         </div>
         <div class="mt-4 text-amber-100/70 text-lg text-center">
-          @account_placeholder
+          @xaccount
         </div>
       </div>
 
-      <!-- Slot 2 (vertical 10 dots + placeholder) -->
-      <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-5 h-56 opacity-70 hover:opacity-90 transition-all transform duration-300 hover:scale-105 overflow-hidden flex flex-col justify-start items-center">
+      <!-- Box 2 -->
+      <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-5 h-56 opacity-70 hover:opacity-90 transition-all transform duration-300 hover:scale-105 flex flex-col justify-start items-center">
         <div class="flex flex-col justify-center items-center space-y-1 text-amber-200 text-3xl font-semibold mt-2">
           <div>•</div><div>•</div><div>•</div><div>•</div>
           <div>•</div><div>•</div><div>•</div><div>•</div>
           <div>•</div><div>•</div>
         </div>
         <div class="mt-4 text-amber-100/70 text-lg text-center">
-          @account_placeholder
+          @xaccount
         </div>
       </div>
 
-      <!-- Slot 3 locked -->
+      <!-- Box 3 -->
+      <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-5 h-56 opacity-70 hover:opacity-90 transition-all transform duration-300 hover:scale-105 flex flex-col justify-start items-center">
+        <div class="flex flex-col justify-center items-center space-y-1 text-amber-200 text-3xl font-semibold mt-2">
+          <div>•</div><div>•</div><div>•</div><div>•</div>
+          <div>•</div><div>•</div><div>•</div><div>•</div>
+          <div>•</div><div>•</div>
+        </div>
+        <div class="mt-4 text-amber-100/70 text-lg text-center">
+          @xaccount
+        </div>
+      </div>
+
+      <!-- Box 4 -->
+      <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-5 h-56 opacity-70 hover:opacity-90 transition-all transform duration-300 hover:scale-105 flex flex-col justify-start items-center">
+        <div class="flex flex-col justify-center items-center space-y-1 text-amber-200 text-3xl font-semibold mt-2">
+          <div>•</div><div>•</div><div>•</div><div>•</div>
+          <div>•</div><div>•</div><div>•</div><div>•</div>
+          <div>•</div><div>•</div>
+        </div>
+        <div class="mt-4 text-amber-100/70 text-lg text-center">
+          @xaccount
+        </div>
+      </div>
+
+      <!-- Box 5 -->
+      <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-5 h-56 opacity-70 hover:opacity-90 transition-all transform duration-300 hover:scale-105 flex flex-col justify-start items-center">
+        <div class="flex flex-col justify-center items-center space-y-1 text-amber-200 text-3xl font-semibold mt-2">
+          <div>•</div><div>•</div><div>•</div><div>•</div>
+          <div>•</div><div>•</div><div>•</div><div>•</div>
+          <div>•</div><div>•</div>
+        </div>
+        <div class="mt-4 text-amber-100/70 text-lg text-center">
+          @xaccount
+        </div>
+      </div>
+
+      <!-- Box 6 locked -->
       <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-5 h-40 opacity-60 hover:opacity-80 transition-all transform duration-300 hover:scale-105 overflow-hidden">
         <h3 class="text-2xl font-bold mb-2 text-amber-400">Locked Winner</h3>
-        <p class="mb-4 italic text-amber-200/70 text-sm">Reveal once the draw is complete.</p>
-        <button class="px-5 py-3 bg-amber-800 text-neutral-900 rounded font-semibold text-sm opacity-60 cursor-not-allowed">
+        <p class="mb-4 italic text-amber-200/70 text-sm text-center">Reveal once the draw is complete.</p>
+        <button class="px-5 py-2 bg-amber-800 text-neutral-900 rounded font-semibold text-sm opacity-60 cursor-not-allowed">
           Locked
         </button>
       </div>
 
-      <!-- Slot 4 locked -->
+      <!-- Box 7 locked -->
       <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-5 h-40 opacity-60 hover:opacity-80 transition-all transform duration-300 hover:scale-105 overflow-hidden">
         <h3 class="text-2xl font-bold mb-2 text-amber-400">Locked Winner</h3>
-        <p class="mb-4 italic text-amber-200/70 text-sm">Reveal once the draw is complete.</p>
-        <button class="px-5 py-3 bg-amber-800 text-neutral-900 rounded font-semibold text-sm opacity-60 cursor-not-allowed">
+        <p class="mb-4 italic text-amber-200/70 text-sm text-center">Reveal once the draw is complete.</p>
+        <button class="px-5 py-2 bg-amber-800 text-neutral-900 rounded font-semibold text-sm opacity-60 cursor-not-allowed">
           Locked
         </button>
       </div>
 
-      <!-- Slot 5 locked -->
+      <!-- Box 8 locked -->
       <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-5 h-40 opacity-60 hover:opacity-80 transition-all transform duration-300 hover:scale-105 overflow-hidden">
         <h3 class="text-2xl font-bold mb-2 text-amber-400">Locked Winner</h3>
-        <p class="mb-4 italic text-amber-200/70 text-sm">Reveal once the draw is complete.</p>
-        <button class="px-5 py-3 bg-amber-800 text-neutral-900 rounded font-semibold text-sm opacity-60 cursor-not-allowed">
+        <p class="mb-4 italic text-amber-200/70 text-sm text-center">Reveal once the draw is complete.</p>
+        <button class="px-5 py-2 bg-amber-800 text-neutral-900 rounded font-semibold text-sm opacity-60 cursor-not-allowed">
           Locked
         </button>
       </div>
 
-      <!-- Slot 6 locked -->
+      <!-- Box 9 locked -->
       <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-5 h-40 opacity-60 hover:opacity-80 transition-all transform duration-300 hover:scale-105 overflow-hidden">
         <h3 class="text-2xl font-bold mb-2 text-amber-400">Locked Winner</h3>
-        <p class="mb-4 italic text-amber-200/70 text-sm">Reveal once the draw is complete.</p>
-        <button class="px-5 py-3 bg-amber-800 text-neutral-900 rounded font-semibold text-sm opacity-60 cursor-not-allowed">
+        <p class="mb-4 italic text-amber-200/70 text-sm text-center">Reveal once the draw is complete.</p>
+        <button class="px-5 py-2 bg-amber-800 text-neutral-900 rounded font-semibold text-sm opacity-60 cursor-not-allowed">
           Locked
         </button>
       </div>
 
-      <!-- Slot 7 locked -->
+      <!-- Box 10 locked -->
       <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-5 h-40 opacity-60 hover:opacity-80 transition-all transform duration-300 hover:scale-105 overflow-hidden">
         <h3 class="text-2xl font-bold mb-2 text-amber-400">Locked Winner</h3>
-        <p class="mb-4 italic text-amber-200/70 text-sm">Reveal once the draw is complete.</p>
-        <button class="px-5 py-3 bg-amber-800 text-neutral-900 rounded font-semibold text-sm opacity-60 cursor-not-allowed">
+        <p class="mb-4 italic text-amber-200/70 text-sm text-center">Reveal once the draw is complete.</p>
+        <button class="px-5 py-2 bg-amber-800 text-neutral-900 rounded font-semibold text-sm opacity-60 cursor-not-allowed">
           Locked
         </button>
       </div>
-
-      <!-- Slot 8 locked -->
-      <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-5 h-40 opacity-60 hover:opacity-80 transition-all transform duration-300 hover:scale-105 overflow-hidden">
-        <h3 class="text-2xl font-bold mb-2 text-amber-400">Locked Winner</h3>
-        <p class="mb-4 italic text-amber-200/70 text-sm">Reveal once the draw is complete.</p>
-        <button class="px-5 py-3 bg-amber-800 text-neutral-900 rounded font-semibold text-sm opacity-60 cursor-not-allowed">
-          Locked
-        </button>
-      </div>
-
-      <!-- Slot 9 locked -->
-      <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-5 h-40 opacity-60 hover:opacity-80 transition-all transform duration-300 hover:scale-105 overflow-hidden">
-        <h3 class="text-2xl font-bold mb-2 text-amber-400">Locked Winner</h3>
-        <p class="mb-4 italic text-amber-200/70 text-sm">Reveal once the draw is complete.</p>
-        <button class="px-5 py-3 bg-amber-800 text-neutral-900 rounded font-semibold text-sm opacity-60 cursor-not-allowed">
-          Locked
-        </button>
-      </div>
-
-      <!-- Slot 10 locked -->
-      <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-5 h-40 opacity-60 hover:opacity-80 transition-all transform duration-300 hover:scale-105 overflow-hidden">
-        <h3 class="text-2xl font-bold mb-2 text-amber-400">Locked Winner</h3>
-        <p class="mb-4 italic text-amber-200/70 text-sm">Reveal once the draw is complete.</p>
-        <button class="px-5 py-3 bg-amber-800 text-neutral-900 rounded font-semibold text-sm opacity-60 cursor-not-allowed">
-          Locked
-        </button>
-      </div>
-
     </div>
 
     <div class="mt-16 text-center">
@@ -313,6 +324,7 @@
     </div>
   </div>
 </section>
+
 
   <!-- Announcements Section -->
   <section id="announcements" class="bg-neutral-950 text-amber-100 py-16 px-8">
