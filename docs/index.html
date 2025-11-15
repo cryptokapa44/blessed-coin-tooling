@@ -197,6 +197,8 @@
 
 <!-- Winners Section -->
 <section id="winners" class="relative text-amber-100 py-32 px-6 sm:px-8 overflow-hidden min-h-screen bg-neutral-900">
+  <div class="absolute inset-0 bg-cover bg-center opacity-15"
+       style="background-image: url('images/win.png');"></div>
   <div class="relative max-w-5xl mx-auto">
     <h2 class="text-4xl md:text-5xl font-bold mb-8 text-amber-300 drop-shadow-lg text-center">
       Hall of Blessed Winners
@@ -205,78 +207,101 @@
       Recognising the champions from each challenge — the ones who held the flame.
     </p>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
-      <!-- Slot 1 (vertical 10 dots + placeholder for account) -->
-      <div class="p-8 bg-neutral-800/70 rounded-lg hover:bg-neutral-800/90 transition transform duration-300 hover:scale-105 overflow-hidden h-full flex flex-col justify-between">
-        <div class="space-y-2 text-amber-200 text-2xl font-semibold">
-          <div>•</div>
-          <div>•</div>
-          <div>•</div>
-          <div>•</div>
-          <div>•</div>
-          <div>•</div>
-          <div>•</div>
-          <div>•</div>
-          <div>•</div>
-          <div>•</div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+      <!-- Slot 1 (vertical 10 dots + placeholder) -->
+      <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-4 h-48 opacity-60 hover:opacity-80 transition-all transform duration-300 hover:scale-105 overflow-hidden flex flex-col justify-between">
+        <div class="space-y-1 text-amber-200 text-xl font-semibold">
+          <div>•</div><div>•</div><div>•</div><div>•</div><div>•</div>
+          <div>•</div><div>•</div><div>•</div><div>•</div><div>•</div>
         </div>
-        <div class="mt-6 text-amber-100/70 text-lg">
+        <div class="mt-4 text-amber-100/70 text-lg">
           @account_placeholder
         </div>
       </div>
 
-      <!-- Slot 2 (vertical 10 dots + placeholder for account) -->
-      <div class="p-8 bg-neutral-800/70 rounded-lg hover:bg-neutral-800/90 transition transform duration-300 hover:scale-105 overflow-hidden h-full flex flex-col justify-between">
-        <div class="space-y-2 text-amber-200 text-2xl font-semibold">
-          <div>•</div>
-          <div>•</div>
-          <div>•</div>
-          <div>•</div>
-          <div>•</div>
-          <div>•</div>
-          <div>•</div>
-          <div>•</div>
-          <div>•</div>
-          <div>•</div>
+      <!-- Slot 2 (vertical 10 dots + placeholder) -->
+      <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-4 h-48 opacity-60 hover:opacity-80 transition-all transform duration-300 hover:scale-105 overflow-hidden flex flex-col justify-between">
+        <div class="space-y-1 text-amber-200 text-xl font-semibold">
+          <div>•</div><div>•</div><div>•</div><div>•</div><div>•</div>
+          <div>•</div><div>•</div><div>•</div><div>•</div><div>•</div>
         </div>
-        <div class="mt-6 text-amber-100/70 text-lg">
+        <div class="mt-4 text-amber-100/70 text-lg">
           @account_placeholder
         </div>
       </div>
 
-      <!-- Slots 3-10 unchanged -->
-      <div class="p-6 bg-neutral-800/70 rounded-lg hover:bg-neutral-800/90 transition transform duration-300 hover:scale-105 overflow-hidden">
-        <h3 class="text-2xl font-semibold mb-2 text-amber-200">@winner3</h3>
-        <p class="text-amber-100/70">Challenge: Holy Meme War</p>
+      <!-- Slot 3 locked -->
+      <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-4 h-40 opacity-60 hover:opacity-80 transition-all transform duration-300 hover:scale-105 overflow-hidden">
+        <h3 class="text-2xl font-bold mb-2 text-amber-400">Locked Winner</h3>
+        <p class="mb-4 italic text-amber-200/70">Reveal once the draw is complete.</p>
+        <button class="px-5 py-2 bg-amber-800 text-neutral-900 rounded font-semibold opacity-60 cursor-not-allowed">
+          Locked
+        </button>
       </div>
-      <div class="p-6 bg-neutral-800/70 rounded-lg hover:bg-neutral-800/90 transition transform duration-300 hover:scale-105 overflow-hidden">
-        <h3 class="text-2xl font-semibold mb-2 text-amber-200">@winner4</h3>
-        <p class="text-amber-100/70">Challenge: Trench Art Contest</p>
+
+      <!-- Slot 4 locked -->
+      <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-4 h-40 opacity-60 hover:opacity-80 transition-all transform duration-300 hover:scale-105 overflow-hidden">
+        <h3 class="text-2xl font-bold mb-2 text-amber-400">Locked Winner</h3>
+        <p class="mb-4 italic text-amber-200/70">Reveal once the draw is complete.</p>
+        <button class="px-5 py-2 bg-amber-800 text-neutral-900 rounded font-semibold opacity-60 cursor-not-allowed">
+          Locked
+        </button>
       </div>
-      <div class="p-6 bg-neutral-800/70 rounded-lg hover:bg-neutral-800/90 transition transform duration-300 hover:scale-105 overflow-hidden">
-        <h3 class="text-2xl font-semibold mb-2 text-amber-200">@winner5</h3>
-        <p class="text-amber-100/70">Challenge: Token Holder Snapshot</p>
+
+      <!-- Slot 5 locked -->
+      <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-4 h-40 opacity-60 hover:opacity-80 transition-all transform duration-300 hover:scale-105 overflow-hidden">
+        <h3 class="text-2xl font-bold mb-2 text-amber-400">Locked Winner</h3>
+        <p class="mb-4 italic text-amber-200/70">Reveal once the draw is complete.</p>
+        <button class="px-5 py-2 bg-amber-800 text-neutral-900 rounded font-semibold opacity-60 cursor-not-allowed">
+          Locked
+        </button>
       </div>
-      <div class="p-6 bg-neutral-800/70 rounded-lg hover:bg-neutral-800/90 transition transform duration-300 hover:scale-105 overflow-hidden">
-        <h3 class="text-2xl font-semibold mb-2 text-amber-200">@winner6</h3>
-        <p class="text-amber-100/70">Challenge: DeFi Quiz Champion</p>
+
+      <!-- Slot 6 locked -->
+      <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-4 h-40 opacity-60 hover:opacity-80 transition-all transform duration-300 hover:scale-105 overflow-hidden">
+        <h3 class="text-2xl font-bold mb-2 text-amber-400">Locked Winner</h3>
+        <p class="mb-4 italic text-amber-200/70">Reveal once the draw is complete.</p>
+        <button class="px-5 py-2 bg-amber-800 text-neutral-900 rounded font-semibold opacity-60 cursor-not-allowed">
+          Locked
+        </button>
       </div>
-      <div class="p-6 bg-neutral-800/70 rounded-lg hover:bg-neutral-800/90 transition transform duration-300 hover:scale-105 overflow-hidden">
-        <h3 class="text-2xl font-semibold mb-2 text-amber-200">@winner7</h3>
-        <p class="text-amber-100/70">Challenge: Meme Drop Mayhem</p>
+
+      <!-- Slot 7 locked -->
+      <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-4 h-40 opacity-60 hover:opacity-80 transition-all transform duration-300 hover:scale-105 overflow-hidden">
+        <h3 class="text-2xl font-bold mb-2 text-amber-400">Locked Winner</h3>
+        <p class="mb-4 italic text-amber-200/70">Reveal once the draw is complete.</p>
+        <button class="px-5 py-2 bg-amber-800 text-neutral-900 rounded font-semibold opacity-60 cursor-not-allowed">
+          Locked
+        </button>
       </div>
-      <div class="p-6 bg-neutral-800/70 rounded-lg hover:bg-neutral-800/90 transition transform duration-300 hover:scale-105 overflow-hidden">
-        <h3 class="text-2xl font-semibold mb-2 text-amber-200">@winner8</h3>
-        <p class="text-amber-100/70">Challenge: Community Milestone 5000</p>
+
+      <!-- Slot 8 locked -->
+      <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-4 h-40 opacity-60 hover:opacity-80 transition-all transform duration-300 hover:scale-105 overflow-hidden">
+        <h3 class="text-2xl font-bold mb-2 text-amber-400">Locked Winner</h3>
+        <p class="mb-4 italic text-amber-200/70">Reveal once the draw is complete.</p>
+        <button class="px-5 py-2 bg-amber-800 text-neutral-900 rounded font-semibold opacity-60 cursor-not-allowed">
+          Locked
+        </button>
       </div>
-      <div class="p-6 bg-neutral-800/70 rounded-lg hover:bg-neutral-800/90 transition transform duration-300 hover:scale-105 overflow-hidden">
-        <h3 class="text-2xl font-semibold mb-2 text-amber-200">@winner9</h3>
-        <p class="text-amber-100/70">Challenge: Midnight Launch Sprint</p>
+
+      <!-- Slot 9 locked -->
+      <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-4 h-40 opacity-60 hover:opacity-80 transition-all transform duration-300 hover:scale-105 overflow-hidden">
+        <h3 class="text-2xl font-bold mb-2 text-amber-400">Locked Winner</h3>
+        <p class="mb-4 italic text-amber-200/70">Reveal once the draw is complete.</p>
+        <button class="px-5 py-2 bg-amber-800 text-neutral-900 rounded font-semibold opacity-60 cursor-not-allowed">
+          Locked
+        </button>
       </div>
-      <div class="p-6 bg-neutral-800/70 rounded-lg hover:bg-neutral-800/90 transition transform duration-300 hover:scale-105 overflow-hidden">
-        <h3 class="text-2xl font-semibold mb-2 text-amber-200">@winner10</h3>
-        <p class="text-amber-100/70">Challenge: Golden Bag Holder</p>
+
+      <!-- Slot 10 locked -->
+      <div class="bg-neutral-900/90 rounded-2xl shadow-lg shadow-amber-900/40 p-4 h-40 opacity-60 hover:opacity-80 transition-all transform duration-300 hover:scale-105 overflow-hidden">
+        <h3 class="text-2xl font-bold mb-2 text-amber-400">Locked Winner</h3>
+        <p class="mb-4 italic text-amber-200/70">Reveal once the draw is complete.</p>
+        <button class="px-5 py-2 bg-amber-800 text-neutral-900 rounded font-semibold opacity-60 cursor-not-allowed">
+          Locked
+        </button>
       </div>
+
     </div>
 
     <div class="mt-16 text-center">
@@ -286,6 +311,7 @@
     </div>
   </div>
 </section>
+
 
   <!-- Announcements Section -->
   <section id="announcements" class="bg-neutral-950 text-amber-100 py-16 px-8">
