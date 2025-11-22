@@ -411,6 +411,81 @@
   </div>
 </section>
 
+<!-- FAQ Section -->
+<section id="faq" class="relative text-amber-100 py-24 px-8 sm:px-12 lg:px-16 overflow-hidden bg-neutral-950">
+  <!-- Background image -->
+  <div class="absolute inset-0 bg-cover bg-center"
+       style="background-image: url('images/faq.png');"></div>
+  <!-- Dark overlay -->
+  <div class="absolute inset-0 bg-gradient-to-b from-neutral-950/80 via-neutral-950/90 to-neutral-950"></div>
+  <!-- Top fade for smooth blend with previous section -->
+  <div class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-neutral-950 via-neutral-950/90 to-transparent"></div>
+
+  <div class="relative max-w-4xl mx-auto">
+    <h2 class="text-4xl font-bold mb-8 text-amber-300 drop-shadow-lg text-center">
+      Frequently Asked Questions
+    </h2>
+
+    <div class="space-y-8">
+      <!-- FAQ Item 1 -->
+      <div class="bg-neutral-900/80 rounded-xl shadow-lg shadow-amber-900/40 p-6">
+        <button class="w-full flex justify-between items-center text-left text-lg font-semibold text-amber-300 hover:text-amber-200 focus:outline-none" aria-expanded="false">
+          <span>What is Blessed Coin?</span>
+          <span class="transform transition-transform duration-300" aria-hidden="true">+</span>
+        </button>
+        <div class="mt-4 text-amber-100/90 max-h-0 overflow-hidden transition-all duration-300">
+          <p>
+            Blessed Coin is not just a memecoin—it’s a sacred banner for the trenches. Born from scars, laughter, and the unshakeable belief in community, we mint trust, reward loyalty and stand together in the shadows to rise as one.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div class="bg-neutral-900/80 rounded-xl shadow-lg shadow-amber-900/40 p-6">
+        <button class="w-full flex justify-between items-center text-left text-lg font-semibold text-amber-300 hover:text-amber-200 focus:outline-none" aria-expanded="false">
+          <span>Why was Blessed Coin created?</span>
+          <span class="transform transition-transform duration-300" aria-hidden="true">+</span>
+        </button>
+        <div class="mt-4 text-amber-100/90 max-h-0 overflow-hidden transition-all duration-300">
+          <p>
+            In a world where trust is often broken and hope fades, Blessed Coin was created to <strong>restore faith in the trenches</strong>—to heal the soldiers, honor the scars, and transform loyalty into something lasting. When others flee the storm, we stand and rebuild.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div class="bg-neutral-900/80 rounded-xl shadow-lg shadow-amber-900/40 p-6">
+        <button class="w-full flex justify-between items-center text-left text-lg font-semibold text-amber-300 hover:text-amber-200 focus:outline-none" aria-expanded="false">
+          <span>How are winners selected?</span>
+          <span class="transform transition-transform duration-300" aria-hidden="true">+</span>
+        </button>
+        <div class="mt-4 text-amber-100/90 max-h-0 overflow-hidden transition-all duration-300">
+          <p>
+            Winners are chosen depending on the quest: some by speed, some by faith, some by sheer creativity. All quests take place in our X community—so bring your story, your art, your devotion. At the listing time, expect the DEX to open around a <strong>40 K $BLESS market-cap</strong>—that’s when the real movement begins.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+// FAQ toggle script
+document.querySelectorAll('#faq button').forEach(button => {
+  button.addEventListener('click', () => {
+    const expanded = button.getAttribute('aria-expanded') === 'true' || false;
+    button.setAttribute('aria-expanded', !expanded);
+    const panel = button.nextElementSibling;
+    if (!expanded) {
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+      button.querySelector('span:last-child').textContent = '–';
+    } else {
+      panel.style.maxHeight = null;
+      button.querySelector('span:last-child').textContent = '+';
+    }
+  });
+});
+</script>
 
 
 <!-- Footer -->
