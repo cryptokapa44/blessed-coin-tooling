@@ -235,8 +235,12 @@
 <section id="winners" class="relative text-amber-100 py-24 px-6 sm:px-8 overflow-hidden bg-neutral-900">
   <!-- Background image -->
   <div class="absolute inset-0 bg-cover bg-center"
-       style="background-image: url('/mnt/data/b85dc73b-d88e-4d64-b555-2903a7df6b26.png');"></div>
-  <!-- Lighter fade overlay for more visibility -->
+       style="background-image: url('images/win.png');"></div>
+  <!-- Top fade -->
+  <div class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-neutral-900 via-transparent to-transparent pointer-events-none"></div>
+  <!-- Bottom fade -->
+  <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-neutral-900 via-transparent to-transparent pointer-events-none"></div>
+  <!-- Slight dark overlay for text readability -->
   <div class="absolute inset-0 bg-gradient-to-b from-neutral-900/30 via-neutral-950/60 to-neutral-950/80"></div>
 
   <div class="relative max-w-6xl mx-auto">
@@ -246,6 +250,10 @@
     <p class="mb-12 text-lg text-amber-100/80 leading-relaxed text-center">
       Recognising the champions from each challenge — the ones who held the flame.
     </p>
+    <!-- …rest of winners content… -->
+  </div>
+</section>
+
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-16">
       <!-- Box 1 -->
