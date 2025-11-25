@@ -737,28 +737,7 @@ document.querySelectorAll('#faq button').forEach(button => {
   </div>
 </footer>
 
-<script src="scripts/site.js" defer></script>
-  <script>
-  const mint = 'EdGoCECeH7xtg6F6B9STvvVMYjFBvUkL4TrLPBq2W2j5';  // Replace with your token’s real mint address
-  const apiKey = 'MY_API_KEY';   // Replace with your actual CoinGecko API key
 
-  const url = `https://api.coingecko.com/api/v3/onchain/networks/solana/tokens/${mint}?x_cg_demo_api_key=${apiKey}`;
-
-  fetch(url)
-    .then(res => res.json())
-    .then(data => {
-      const stats = data.data.attributes;
-      document.getElementById('market-cap').textContent = 
-        stats.market_cap_usd ? `$${Number(stats.market_cap_usd).toLocaleString()}` : 'N/A';
-      document.getElementById('volume').textContent = 
-        stats.volume_usd?.h24 ? `$${Number(stats.volume_usd.h24).toLocaleString()}` : 'N/A';
-      document.getElementById('supply').textContent = 
-        stats.normalized_total_supply ? Number(stats.normalized_total_supply).toLocaleString() : 'N/A';
-    })
-    .catch(err => {
-      console.error('Error fetching token data:', err);
-    });
-</script>
 
 </body>
 </html>
