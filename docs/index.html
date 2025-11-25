@@ -69,7 +69,15 @@
     <p class="text-xl mb-12 text-amber-100/90">
       A spiritual memecoin for the trenches. We mint trust, share stories, reward devotion, and lift the community with sacred quests and art.
     </p>
-
+<!-- Token Stats -->
+<div class="mb-12 text-center">
+  <h2 class="text-3xl font-bold text-amber-400 mb-4">Token Stats</h2>
+  <div class="space-y-2 text-lg">
+    <div>Market Cap: <span id="market-cap">Loading...</span></div>
+    <div>24h Volume: <span id="volume">Loading...</span></div>
+    <div>Supply: <span id="supply">Loading...</span></div>
+  </div>
+</div>
 <!-- Updated Buttons -->
 <div class="flex flex-wrap justify-center gap-4 mt-[75vh] sm:mt-[60vh]">
   <a href="#community-cta" class="px-6 py-3 bg-amber-500 hover:bg-amber-600 rounded font-semibold transition shadow-lg shadow-amber-500/40">
@@ -723,6 +731,28 @@ document.querySelectorAll('#faq button').forEach(button => {
 </footer>
 
 <script src="scripts/site.js" defer></script>
+  <script>
+  const mint = 'EdGoCECeH7xtg6F6B9STvvVMYjFBvUkL4TrLPBq2W2j5';  // Replace with your token’s real mint address
+  const apiKey = 'CG-FNAxrYYKneT3JWAd4a8UPceD';   // Replace with your actual CoinGecko API key
+
+  const url = `https://api.coingecko.com/api/v3/onchain/networks/solana/tokens/${mint}?x_cg_demo_api_key=${apiKey}`;
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      const stats = data.data.attributes;
+      document.getElementById('market-cap').textContent = 
+        stats.market_cap_usd ? `$${Number(stats.market_cap_usd).toLocaleString()}` : 'N/A';
+      document.getElementById('volume').textContent = 
+        stats.volume_usd?.h24 ? `$${Number(stats.volume_usd.h24).toLocaleString()}` : 'N/A';
+      document.getElementById('supply').textContent = 
+        stats.normalized_total_supply ? Number(stats.normalized_total_supply).toLocaleString() : 'N/A';
+    })
+    .catch(err => {
+      console.error('Error fetching token data:', err);
+    });
+</script>
+
 </body>
 </html>
 
