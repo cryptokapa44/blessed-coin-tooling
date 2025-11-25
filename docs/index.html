@@ -69,21 +69,22 @@
     <p class="text-xl mb-12 text-amber-100/90">
       A spiritual memecoin for the trenches. We mint trust, share stories, reward devotion, and lift the community with sacred quests and art.
     </p>
-    <!-- Token Stats panel: absolute, centered above the buttons -->
-  <div class="absolute bottom-24 inset-x-0 flex justify-center items-center gap-8 text-center text-white">
-    <div class="flex flex-col items-center">
-      <span class="text-3xl font-bold">$123M</span>
-      <span class="text-sm uppercase tracking-wide">Market Cap</span>
-    </div>
-    <div class="flex flex-col items-center">
-      <span class="text-3xl font-bold">$5M</span>
-      <span class="text-sm uppercase tracking-wide">24h Volume</span>
-    </div>
-    <div class="flex flex-col items-center">
-      <span class="text-3xl font-bold">100M</span>
-      <span class="text-sm uppercase tracking-wide">Supply</span>
-    </div>
+   <!-- Token Stats (live from API) -->
+<div class="absolute bottom-36 inset-x-0 flex justify-center items-center gap-8 text-center text-white z-20">
+  <div class="flex flex-col items-center">
+    <span id="market-cap" class="text-3xl font-bold">Loading...</span>
+    <span class="text-sm uppercase tracking-wide">Market Cap</span>
   </div>
+  <div class="flex flex-col items-center">
+    <span id="volume" class="text-3xl font-bold">Loading...</span>
+    <span class="text-sm uppercase tracking-wide">24h Volume</span>
+  </div>
+  <div class="flex flex-col items-center">
+    <span id="supply" class="text-3xl font-bold">Loading...</span>
+    <span class="text-sm uppercase tracking-wide">Supply</span>
+  </div>
+</div>
+
 
 <!-- Updated Buttons -->
 <div class="flex flex-wrap justify-center gap-4 mt-[75vh] sm:mt-[60vh]">
