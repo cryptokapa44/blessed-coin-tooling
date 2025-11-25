@@ -4,7 +4,7 @@ console.log("Blessed Coin site script loaded");
 (async function fetchTokenMetrics() {
   const contract = "EHvGhUxaXZaUsKzLNk8mv8eLrMPiBBij5RvxNV8pump";  // your mint
   try {
-    const resp = await fetch(`https://<blessed-worker.trenchwarrior4.workers.dev>.workers.dev/api?contract=${contract}`);
+    const resp = await fetch(`https://blessed-worker.trenchwarrior4.workers.dev/api?contract=${contract}`);
     const data = await resp.json();
 
     document.getElementById('market-cap').textContent   = data.marketCap   ?? 'N/A';
