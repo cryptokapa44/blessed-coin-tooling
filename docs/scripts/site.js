@@ -12,7 +12,7 @@ function formatNumber(num) {
 
 // Fetch token metrics and update DOM
 async function fetchTokenMetrics() {
-  const contract = "EHvGhUxaXZaUsKzLNk8mv8eLrMPiBBij5RvxNV8pump";
+  const contract = "7rbNThYsLZ8Lh8hB6dpqWh8XcAgodVH1whMutRrvpump";
   const apiUrl = `https://blessed-worker.trenchwarrior4.workers.dev/api?contract=${contract}`;
   try {
     const resp = await fetch(apiUrl, { method: 'GET', mode: 'cors' });
