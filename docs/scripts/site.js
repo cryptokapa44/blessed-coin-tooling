@@ -15,3 +15,4 @@ console.log("Blessed Coin site script loaded");
     console.error('Error fetching token metrics:', err);
   }
 })();
+// trigger rebuild
