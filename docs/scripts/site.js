@@ -23,10 +23,10 @@ function animateValue(id, value) {
     return;
   }
 
-  const countUp = new CountUp(id, num, {
+  // ✅ Use CountUp from the window object
+  const countUp = new window.CountUp(id, num, {
     duration: 2,
     separator: ',',
-    suffix: value >= 1000 ? '' : '',
   });
 
   if (!countUp.error) {
