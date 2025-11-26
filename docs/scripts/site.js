@@ -10,54 +10,26 @@ function formatNumber(num) {
   return num.toString();
 }
 
-// Animate numbers using CountUp.js
-function animateValue(id, value) {
-  const el = document.getElementById(id);
-  if (!el || value === 'N/A') {
-    el.textContent = 'N/A';
-    return;
-  }
-  const num = Number(value);
-  if (isNaN(num)) {
-    el.textContent = 'N/A';
-    return;
-  }
-
-  const countUp = new CountUp(id, num, {
-    duration: 2,
-    separator: ',',
-    suffix: value >= 1000 ? '' : '',
-  });
-
-  if (!countUp.error) {
-    countUp.start();
-  } else {
-    console.error(countUp.error);
-    el.textContent = formatNumber(value);
-  }
-}
-
 // Fetch token metrics and update DOM
 async function fetchTokenMetrics() {
-  const contract = "7rbNThYsLZ8Lh8hB6dpqWh8XcAgodVH1whMutRrvpump";
+  const contract = "EHvGhUxaXZaUsKzLNk8mv8eLrMPiBBij5RvxNV8pump";
   const apiUrl = `https://blessed-worker.trenchwarrior4.workers.dev/api?contract=${contract}`;
   try {
     const resp = await fetch(apiUrl, { method: 'GET', mode: 'cors' });
     if (!resp.ok) throw new Error(`Network response was not OK (${resp.status})`);
     const data = await resp.json();
 
-    animateValue('market-cap', data.marketCap);
-    animateValue('volume-24h', data.volume24h);
-    animateValue('total-supply', data.totalSupply);
+    document.getElementById('market-cap').textContent    = data.marketCap   ? formatNumber(data.marketCap)   : 'N/A';
+    document.getElementById('volume-24h').textContent     = data.volume24h   ? formatNumber(data.volume24h)   : 'N/A';
+    document.getElementById('total-supply').textContent   = data.totalSupply ? formatNumber(data.totalSupply) : 'N/A';
   } catch (err) {
     console.error('Error fetching token metrics:', err);
-    document.getElementById('market-cap').textContent = 'N/A';
-    document.getElementById('volume-24h').textContent = 'N/A';
-    document.getElementById('total-supply').textContent = 'N/A';
+    document.getElementById('market-cap').textContent    = 'N/A';
+    document.getElementById('volume-24h').textContent    = 'N/A';
+    document.getElementById('total-supply').textContent  = 'N/A';
   }
 }
 
 // Initial load and refresh every 60 seconds
 fetchTokenMetrics();
 setInterval(fetchTokenMetrics, 60_000);
-
