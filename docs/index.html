@@ -77,7 +77,7 @@
     animation: shimmer 2.5s infinite;
   }
 
-  /* Spinning coin animation */
+  /* Spinning Blessed Coin (fixed bottom-right) */
   @keyframes spin {
     0% { transform: rotateY(0deg); }
     100% { transform: rotateY(360deg); }
@@ -85,16 +85,16 @@
 
   .spinning-coin {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    z-index: 9999;
+    bottom: 24px;
+    right: 24px;
+    width: 64px;
+    height: 64px;
     animation: spin 4s linear infinite;
     pointer-events: none;
+    z-index: 1000;
+    border-radius: 50%;
   }
 </style>
-
 </head>
 
 
