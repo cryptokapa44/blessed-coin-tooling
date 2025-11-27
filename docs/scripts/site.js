@@ -10,11 +10,11 @@ function formatNumber(num) {
   return num.toString();
 }
 
-// Animate numbers using CountUp.js
+// Animate numbers using CountUp.js (from UMD build)
 function animateValue(id, value) {
   const el = document.getElementById(id);
   if (!el || value === 'N/A') {
-    el.textContent = 'N/A';
+    if (el) el.textContent = 'N/A';
     return;
   }
   const num = Number(value);
@@ -23,16 +23,23 @@ function animateValue(id, value) {
     return;
   }
 
-  // ✅ Use CountUp from the window object
-const countUp = new window.CountUp(id, num, {
+  // ✅ FIX: Use the CountUp constructor from the UMD global object
+  const CountUp = window.countUp && window.countUp.CountUp;
+  if (!CountUp) {
+    console.error("CountUp is not defined correctly on window.countUp");
+    el.textContent = formatNumber(value);
+    return;
+  }
+
+  const counter = new CountUp(id, num, {
     duration: 2,
     separator: ',',
   });
 
-  if (!countUp.error) {
-    countUp.start();
+  if (!counter.error) {
+    counter.start();
   } else {
-    console.error(countUp.error);
+    console.error(counter.error);
     el.textContent = formatNumber(value);
   }
 }
