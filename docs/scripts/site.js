@@ -1,51 +1,31 @@
 console.log("Blessed Coin site script loaded");
 
-// Helper function to format large numbers (e.g. 17.3K, 2.5M)
+// Helper function to format large numbers (e.g. 17.3K, 2.5M, 1.4B)
 function formatNumber(num) {
   if (typeof num !== "number") num = Number(num);
   if (isNaN(num)) return "N/A";
-  if (num >= 1_000_000_000_000) return (num / 1_000_000_000_000).toFixed(1) + "T";
   if (num >= 1_000_000_000) return (num / 1_000_000_000).toFixed(1) + "B";
   if (num >= 1_000_000) return (num / 1_000_000).toFixed(1) + "M";
   if (num >= 1_000) return (num / 1_000).toFixed(1) + "K";
   return num.toString();
 }
 
-// Animate numbers using CountUp.js (from UMD build)
+// Format and inject values without animation
 function animateValue(id, value) {
   const el = document.getElementById(id);
   if (!el || value === 'N/A') {
     if (el) el.textContent = 'N/A';
     return;
   }
+
   const num = Number(value);
   if (isNaN(num)) {
     el.textContent = 'N/A';
     return;
   }
 
-  console.log(`[DEBUG] Animating #${id}: raw value = ${value}, parsed = ${num}`);
-
-  const CountUp = window.countUp && window.countUp.CountUp;
-  if (!CountUp) {
-    console.error("CountUp is not defined correctly on window.countUp");
-    el.textContent = formatNumber(value);
-    return;
-  }
-
-  const useDecimals = num < 1_000_000_000;
-  const counter = new CountUp(id, num, {
-    duration: 2,
-    separator: ',',
-    decimalPlaces: useDecimals ? 2 : 0,
-  });
-
-  if (!counter.error) {
-    counter.start();
-  } else {
-    console.error(counter.error);
-    el.textContent = formatNumber(value);
-  }
+  console.log(`[DEBUG] Displaying #${id}: raw = ${value}, formatted = ${formatNumber(num)}`);
+  el.textContent = formatNumber(num);
 }
 
 // Fetch token metrics and update DOM
@@ -71,4 +51,5 @@ async function fetchTokenMetrics() {
 // Initial load and refresh every 60 seconds
 fetchTokenMetrics();
 setInterval(fetchTokenMetrics, 60_000);
+
 
