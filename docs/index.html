@@ -83,16 +83,30 @@
     100% { transform: rotateY(360deg); }
   }
 
- .spinning-coin {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 90px;
-  height: 90px;
-  z-index: 9999;
-  animation: spin 4s linear infinite;
-  pointer-events: none;
-}
+  .spinning-coin {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 90px;
+    height: 90px;
+    z-index: 9999;
+    animation: spin 4s linear infinite;
+    pointer-events: none;
+  }
+
+  /* Typography boost for About section */
+  #about p {
+    font-size: 1.35rem; /* slightly larger text */
+    line-height: 1.8;
+    color: #fefce8; /* light amber tone */
+    text-shadow: 0 0 6px rgba(255, 191, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+
+  #about p:hover {
+    color: #facc15;
+    text-shadow: 0 0 10px #facc15;
+  }
 </style>
 </head>
 
