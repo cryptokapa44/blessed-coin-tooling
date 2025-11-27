@@ -730,11 +730,12 @@ document.querySelectorAll('#faq button').forEach(button => {
 });
 </script>
 
-<!-- ✅ Load CountUp.js FIRST and remove 'defer' -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.6.2/countUp.umd.js"></script>
+<!-- ✅ CountUp must load FIRST -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.6.2/countUp.min.js"></script>
 
-<!-- ✅ THEN load your script, keep 'defer' -->
-<script src="scripts/site.js"></script>
+<!-- ✅ Then load your logic -->
+<script src="scripts/site.js" defer></script>
+
 
 <!-- Trigger rebuild -->
 
