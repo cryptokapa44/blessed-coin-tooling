@@ -59,7 +59,25 @@
   .cta-animate {
     animation: fadeInUp 1.5s ease-out both;
   }
+
+  /* Shimmer effect for button */
+  @keyframes shimmer {
+    0% {
+      box-shadow: 0 0 0 transparent;
+    }
+    50% {
+      box-shadow: 0 0 8px 4px rgba(250, 204, 21, 0.4);
+    }
+    100% {
+      box-shadow: 0 0 0 transparent;
+    }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2.5s infinite;
+  }
 </style>
+
 
 
 </head>
