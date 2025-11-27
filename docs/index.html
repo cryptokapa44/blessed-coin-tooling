@@ -44,7 +44,7 @@
     animation: glow 3s ease-in-out infinite;
   }
 
-  /* Fade-in-up for subtitle */
+  /* Fade-in-up only for Join Community section */
   @keyframes fadeInUp {
     0% {
       opacity: 0;
@@ -56,10 +56,11 @@
     }
   }
 
-  .fade-in-up {
-    animation: fadeInUp 1.5s ease-out forwards;
+  .cta-animate {
+    animation: fadeInUp 1.5s ease-out both;
   }
 </style>
+
 
 </head>
 
@@ -183,7 +184,10 @@
   <!-- Bottom fade overlay (stronger) -->
   <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/90 to-transparent pointer-events-none"></div>
 
-  <div class="relative z-10 max-w-4xl mx-auto text-center py-32 sm:py-40">
+  <!-- Glow aura behind content -->
+  <div class="absolute z-0 left-1/2 top-1/2 w-[60vw] h-[60vw] sm:w-[30vw] sm:h-[30vw] bg-amber-400/10 blur-3xl rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+
+  <div class="relative z-10 max-w-4xl mx-auto text-center py-32 sm:py-40 animate-fade-in-up">
     <p class="uppercase tracking-[0.25em] text-amber-300/80 text-xs sm:text-sm mb-4">Healer of the Trenches</p>
     <h1 class="text-5xl sm:text-6xl font-extrabold leading-tight text-amber-200 drop-shadow mb-6">
       Join the Blessed Community
@@ -193,7 +197,7 @@
     </p>
     <a href="https://x.com/your-handle" target="_blank" rel="noopener"
        class="inline-flex items-center justify-center rounded-2xl px-8 py-5 font-semibold
-              bg-amber-300 text-neutral-900 hover:bg-amber-200 transition ring-amber-300/40 ring-1">
+              bg-amber-300 text-neutral-900 hover:bg-amber-200 transition ring-amber-300/40 ring-1 animate-shimmer">
       Join the Community
     </a>
   </div>
