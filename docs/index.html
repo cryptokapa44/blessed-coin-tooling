@@ -14,7 +14,7 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
 
-<style>
+<style> 
   html {
     scroll-behavior: smooth;
   }
@@ -76,9 +76,24 @@
   .animate-shimmer {
     animation: shimmer 2.5s infinite;
   }
+
+  /* Spinning coin animation */
+  @keyframes spin {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+  }
+
+  .spinning-coin {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 9999;
+    animation: spin 4s linear infinite;
+    pointer-events: none;
+  }
 </style>
-
-
 
 </head>
 
@@ -816,6 +831,7 @@ document.querySelectorAll('#faq button').forEach(button => {
   </div>
 </footer>
   
+<img src="spinningblessedcoin.png" alt="Spinning Blessed Coin" class="spinning-coin" />
 
 </body>
 </html>
