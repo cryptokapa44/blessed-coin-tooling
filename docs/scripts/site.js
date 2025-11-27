@@ -24,7 +24,7 @@ function animateValue(id, value) {
   }
 
   // ✅ Use CountUp from the window object
- const countUp = new CountUp(id, num, {
+const countUp = new window.CountUp(id, num, {
     duration: 2,
     separator: ',',
   });
