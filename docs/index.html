@@ -168,15 +168,27 @@
   <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none"></div>
 
   <!-- Top header content (title + subtitle) -->
-  <div class="relative z-10 mt-14">  <!-- adjust mt-12 if you want slightly more/less top spacing -->
+  <div class="relative z-10 mt-14">
     <h1 class="text-5xl font-extrabold mb-4 text-amber-300 animate-glow">Blessed Coin</h1>
     <p class="text-lg sm:text-xl mb-10 text-amber-200 italic tracking-wide animate-fade-in">
       Not just a coin — a sacred movement. Walk the path, earn your blessing, and help restore faith in the chain.
     </p>
   </div>
 
-  <!-- Bottom area: stats + buttons -->
-  <div class="relative z-10 mb-10">  <!-- mb-12 lifts it a bit above bottom -->
+  <!-- Middle / Bottom area: CA box + stats + buttons -->
+  <div class="relative z-10 mb-10 space-y-6">
+
+    <!-- CA box styled like stat-cards -->
+    <div class="inline-flex items-center bg-white/10 backdrop-blur-sm border border-amber-300/30 rounded-xl shadow-lg shadow-amber-300/20 px-4 py-3 mx-auto max-w-xl">
+      <span id="contract-address" class="font-mono text-sm sm:text-base text-amber-100 truncate">
+        FQfiEskJUp2wARYqzXgSEuugZ7cimxrKsvRuTm95pump
+      </span>
+      <button id="copy-ca-btn"
+              class="ml-4 px-3 py-1 bg-amber-500 hover:bg-amber-600 rounded font-semibold text-neutral-900 text-sm transition shadow-lg shadow-amber-500/40">
+        Copy
+      </button>
+    </div>
+
     <!-- Stat cards -->
     <div class="flex justify-center items-center gap-6 text-center text-white mb-4">
       <div class="bg-white/10 backdrop-blur-sm border border-amber-300/30 rounded-xl px-6 py-3 shadow-lg shadow-amber-300/20 flex flex-col items-center w-36">
@@ -217,9 +229,9 @@
         FAQ
       </a>
     </div>
-  </div>
-</header>
 
+  </div>
+  </header>
 
 <!-- Join Community CTA -->
 <section id="community-cta"
@@ -849,6 +861,21 @@ document.querySelectorAll('#faq button').forEach(button => {
   
 <img src="images/spinningblessedcoin.png" alt="Spinning Blessed Coin" class="spinning-coin" />
 
+<script>
+  // Copy CA to clipboard
+  document.getElementById('copy-ca-btn').addEventListener('click', async () => {
+    const ca = document.getElementById('contract-address').textContent;
+    try {
+      await navigator.clipboard.writeText(ca);
+      const btn = document.getElementById('copy-ca-btn');
+      btn.textContent = 'Copied ✅';
+      setTimeout(() => { btn.textContent = 'Copy'; }, 2000);
+    } catch (err) {
+      console.error('Could not copy CA: ', err);
+    }
+  });
+</script>
+  
 </body>
 </html>
 
