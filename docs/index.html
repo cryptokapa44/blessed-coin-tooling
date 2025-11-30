@@ -167,8 +167,8 @@
   <!-- Bottom fade -->
   <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none"></div>
 
-  <!-- Top header content -->
-  <div class="relative z-10 mt-12">  <!-- add some top margin to avoid nav overlap -->
+  <!-- Top header content (title + subtitle) -->
+  <div class="relative z-10 mt-12">  <!-- maybe adjust mt-12 as needed -->
     <h1 class="text-5xl font-extrabold mb-4 text-amber-300 animate-glow">Blessed Coin</h1>
     <p class="text-lg sm:text-xl mb-12 text-amber-200 italic tracking-wide animate-fade-in">
       Not just a coin — a sacred movement. Walk the path, earn your blessing, and help restore faith in the chain.
@@ -176,9 +176,9 @@
   </div>
 
   <!-- Bottom area: stats + buttons -->
-  <div class="relative z-10 mb-16">  <!-- bottom margin so buttons are above bottom fade -->
+  <div class="relative z-10 mb-24">  <!-- increase bottom margin to lift it up a bit -->
     <!-- Stat cards -->
-    <div class="flex justify-center items-center gap-6 text-center text-white mb-8">
+    <div class="flex justify-center items-center gap-6 text-center text-white mb-6">
       <div class="bg-white/10 backdrop-blur-sm border border-amber-300/30 rounded-xl px-6 py-4 shadow-lg shadow-amber-300/20 flex flex-col items-center w-40">
         <span id="market-cap" class="text-2xl sm:text-3xl font-bold">Loading…</span>
         <span class="text-xs uppercase tracking-wider text-amber-200/90 mt-1">Market Cap</span>
@@ -226,6 +226,7 @@
     </div>
   </div>
 </header>
+
 
 
 <!-- Join Community CTA -->
