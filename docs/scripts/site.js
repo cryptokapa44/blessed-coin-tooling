@@ -30,7 +30,7 @@ function animateValue(id, value) {
 
 // Fetch token metrics and update DOM
 async function fetchTokenMetrics() {
-  const contract = "9bi1Um4AHE4eq7z1pEEEx7E9VSmQQovNo2fVxrLapump";
+  const contract = "8bx4KzrJXgZzd9P2n3WFvFof26duso3pnP6RwpK6pump";
   const apiUrl = `https://blessed-worker.trenchwarrior4.workers.dev/api?contract=${contract}`;
   try {
     const resp = await fetch(apiUrl, { method: 'GET', mode: 'cors' });
